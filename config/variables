@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+export PROJECT_ROOT=$EDEF_PATH/backend
+export CLI_PATH=$EDEF_PATH/devops
+export GITHUB_REPOSITORY='https://api.github.com/repos/C3DSU/e-DefPR'
+export PATH="$EDEF_PATH/devops:$PATH"
+export MYSQL_DATABASE='edef_pr'
+export MYSQL_HOST="127.0.0.1"
+export MYSQL_PORT="3306"
+export BACKUPS_DIR="$EDEF_PATH/devops/backups"
+
+slack_uri='https://hooks.slack.com/services/T9UBYA0BZ'
+export SLACK_HOOK_HOMOLOG="${slack_uri}/BBEF9D14K/FpW25k7D11IIb4YsvIUqx66D"
+export SLACK_HOOK_REVIEW="${slack_uri}/BBW6H1GUR/LNnBBZQg2BUIUuJ7KMYLElLg"
+export SLACK_HOOK_HOMOLOG_EXCEPTIONS="${slack_uri}/BDELAT6MA/xHu2NVpAp9sMUJhstTSNfUep"
+export SLACK_HOOK_HOMOLOG_BACKUPS="${slack_uri}/BDL5M6NSU/GmA82JBeFVl4GRiKBCeXv7aK"

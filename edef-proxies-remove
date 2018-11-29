@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+source ${CLI_PATH}config/colors
+
+echo -e "${YELLOW}Removing http_proxy${NC} from yarn..."
+yarn config delete proxy
+echo -e "${YELLOW}Removing http_proxy${NC} from yarn..."
+yarn config delete https-proxy
+
+echo -e "${YELLOW}Removing http_proxy${NC} from GIT..."
+git config --global --unset http.proxy
+echo -e "${YELLOW}Removing https_proxy${NC} from GIT..."
+git config --global --unset https.proxy
+
+echo -e "${YELLOW}Removing http_proxy${NC} from Linux terminal..."
+unset http_proxy
+echo -e "${YELLOW}Removing https_proxy${NC} from Linux terminal..."
+unset https_proxy
+echo -e "${GREEN}All done, proxies removed.${NC}"

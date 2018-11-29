@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+source ${CLI_PATH}config/colors
+
+cd $EDEF_PATH/frontend
+
+echo -e "${PURPLE}Fixing code indentation and spacing on frontend...${NC}"
+yarn standard --fix
+
+echo -e "${GREEN}All done, code linted.${NC}"
